@@ -419,7 +419,7 @@ button:-moz-focus-inner {
 
 .welcome__title {
   position: relative;
-  z-index: 100;
+  z-index: 1;
   margin: 0 0 20px 0;
   font-family: "RobotoSlab", sans-serif;
   font-style: normal;
@@ -448,8 +448,8 @@ button:-moz-focus-inner {
   width: 50px;
   height: 10px;
   background: #ffffff;
-  -webkit-animation: blinking 320ms linear 0ms infinite alternate;
-          animation: blinking 320ms linear 0ms infinite alternate;
+  -webkit-animation: blinking 330ms linear 0ms infinite alternate;
+          animation: blinking 330ms linear 0ms infinite alternate;
 }
 
 .welcome__title:hover:after {
@@ -547,6 +547,132 @@ button:-moz-focus-inner {
   border: 10px solid #ffffff;
   border-radius: 50%;
   max-width: 280px;
+}
+
+.preloader {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #000000;
+  opacity: 1;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.preloader--hide {
+  opacity: 0;
+}
+
+.preloader__el {
+  position: relative;
+  opacity: 1;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.preloader__el--hide {
+  opacity: 0;
+}
+
+.preloader__el:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  height: 100%;
+  width: 35px;
+  background: #ff2a2a;
+  -webkit-animation: moveBlock 1.1s ease-in-out infinite alternate;
+          animation: moveBlock 1.1s ease-in-out infinite alternate;
+}
+
+.preloader span {
+  color: #ffffff;
+  font-family: "OpenSans", sans-serif;
+  font-size: 40px;
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+}
+
+@-webkit-keyframes moveBlock {
+  0% {
+    left: -40px;
+    width: 35px;
+  }
+  25% {
+  }
+  50% {
+    width: 100px;
+  }
+  75% {
+  }
+  100% {
+    width: 35px;
+    left: 150px;
+  }
+}
+
+@keyframes moveBlock {
+  0% {
+    left: -40px;
+    width: 35px;
+  }
+  25% {
+  }
+  50% {
+    width: 100px;
+  }
+  75% {
+  }
+  100% {
+    width: 35px;
+    left: 150px;
+  }
+}
+
+@-webkit-keyframes close {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes close {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes changeColor {
+  0% {
+    color: #ffffff;
+  }
+  100% {
+    color: #ff2a2a;
+  }
+}
+
+@keyframes changeColor {
+  0% {
+    color: #ffffff;
+  }
+  100% {
+    color: #ff2a2a;
+  }
 }
 
 @media only screen and (max-width: 957px) {
