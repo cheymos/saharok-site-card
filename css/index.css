@@ -415,12 +415,17 @@ button:-moz-focus-inner {
   max-width: 600px;
   cursor: default;
   margin: 0 20px 0 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
 }
 
 .welcome__title {
   position: relative;
   z-index: 1;
-  margin: 0 0 20px 0;
+  margin: 0 0 23px 0;
   font-family: "RobotoSlab", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -546,7 +551,7 @@ button:-moz-focus-inner {
   display: block;
   border: 10px solid #ffffff;
   border-radius: 50%;
-  max-width: 280px;
+  max-width: 300px;
 }
 
 .preloader {
@@ -617,7 +622,7 @@ button:-moz-focus-inner {
   }
   100% {
     width: 35px;
-    left: 150px;
+    left: 160px;
   }
 }
 
@@ -635,7 +640,7 @@ button:-moz-focus-inner {
   }
   100% {
     width: 35px;
-    left: 150px;
+    left: 160px;
   }
 }
 
@@ -686,24 +691,24 @@ button:-moz-focus-inner {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    margin-top: 10px;
+    margin: 10px 0 0 0;
     margin: 0;
   }
   .avatar {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
-    margin-bottom: 10px;
+    margin: 0 0 25px 0;
   }
 }
 
 @media only screen and (max-width: 655px) {
   .welcome__title {
-    font-size: 30px;
+    font-size: 34px;
     line-height: 34px;
   }
   .welcome__description {
-    font-size: 14px;
+    font-size: 16px;
   }
   .links {
     -webkit-box-orient: vertical;
