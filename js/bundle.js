@@ -1,22 +1,16 @@
 // Preloader -------------------------------------------------------
-
 window.onload = removePreloader;
 
 function removePreloader() {
-  const preloader = document.querySelector('#preloader');
-  const preloaderEl = document.querySelector('#preloader__el');
-
-  setInterval(() => {
+  var preloader = document.querySelector('#preloader');
+  var preloaderEl = document.querySelector('#preloader__el');
+  setInterval(function () {
     preloaderEl.classList.add('preloader__el--hide');
   }, 3000);
-
-  setInterval(() => {
+  setInterval(function () {
     preloader.classList.add('preloader--hide');
   }, 3800);
-
-  setInterval(() => {
+  setInterval(function () {
     preloader.remove();
   }, 4500);
-}
-
-// --------------------------------------------------------------------
+} // --------------------------------------------------------------------
