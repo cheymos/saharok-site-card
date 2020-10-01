@@ -357,10 +357,27 @@ template {
   display: none;
 }
 
+@-webkit-keyframes blinking {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
 body {
-  margin: 0;
-  padding: 0;
   background: #000000;
+  width: 100%;
 }
 
 button {
@@ -396,7 +413,8 @@ button:-moz-focus-inner {
 
 .welcome {
   max-width: 600px;
-  margin: 0 30px 0 0;
+  cursor: default;
+  margin: 0 20px 0 0;
 }
 
 .welcome__title {
@@ -430,6 +448,8 @@ button:-moz-focus-inner {
   width: 50px;
   height: 10px;
   background: #ffffff;
+  -webkit-animation: blinking 320ms linear 0ms infinite alternate;
+          animation: blinking 320ms linear 0ms infinite alternate;
 }
 
 .welcome__title:hover:after {
@@ -442,6 +462,8 @@ button:-moz-focus-inner {
   border-radius: 5px;
   -webkit-box-shadow: 5px 5px 0px 1px #a7a7a7;
           box-shadow: 5px 5px 0px 1px #a7a7a7;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 .welcome__description {
@@ -540,6 +562,7 @@ button:-moz-focus-inner {
         -ms-flex-order: 1;
             order: 1;
     margin-top: 10px;
+    margin: 0;
   }
   .avatar {
     -webkit-box-ordinal-group: 1;
