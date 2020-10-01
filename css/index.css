@@ -544,7 +544,6 @@ button:-moz-focus-inner {
 
 .avatar {
   display: block;
-  background: #ffffff;
   border: 10px solid #ffffff;
   border-radius: 50%;
   max-width: 280px;
@@ -590,6 +589,6 @@ button:-moz-focus-inner {
     width: 100%;
   }
   .links__btn:not(:last-child) {
-    margin: 0 0 5px 0;
+    margin: 0 0 8px 0;
   }
 }
